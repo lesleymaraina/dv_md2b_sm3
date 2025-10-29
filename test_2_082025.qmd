@@ -113,6 +113,28 @@ Discuss how to develop a single-message categorical chart for a biomedical resea
 ## <span style="font-size:80%"></span> {.smaller}
 
 ::: columns
+::: {.column width="70%"}
+![](images/collaborators.png){.border .border-thick}
+:::
+
+::: {.column width="0%"}
+
+
+::: incremental
+
+
+:::
+:::
+
+:::
+::: footer
+:::
+
+
+
+## <span style="font-size:80%"></span> {.smaller}
+
+::: columns
 ::: {.column width="50%"}
 ![](images/thoughts.png){.border .border-thick}
 :::
