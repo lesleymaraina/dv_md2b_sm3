@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.33">
 
   <meta name="author" content=" Lesley Chapman Hannah, Ph.D., M.S. College of Graduate Studies Northeast Ohio Medical University">
-  <title>Data visualization strategies and Discussion on common pitfalls</title>
+  <title>Clarity Through Categories:  Designing Interpretive Visuals for  Biomedical Categorical Data - Part 2</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -130,7 +130,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h2 style="color: #2A76DD;" class="title">Data visualization strategies and Discussion on common pitfalls</h2>
+  <h2 style="color: #2A76DD;" class="title">Clarity Through Categories: <br>Designing Interpretive Visuals for <br>Biomedical Categorical Data - Part 2</h2>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -141,409 +141,354 @@
 </div>
 
 </section>
-<section id="lecture-overview" class="slide level2">
-<h2>Lecture Overview</h2>
-<ul>
-<li class="fragment">Review: Data visualization practices in biomedical and clinical research</li>
-<li class="fragment">Discuss common data visualization pitfalls</li>
-<li class="fragment">Strategies for redesigning figures for insight</li>
-</ul>
+<section id="lecture-goal" class="slide level2">
+<h2>Lecture Goal</h2>
+<p>Discuss how to develop a single-message categorical chart for a biomedical research task</p>
 <div class="footer">
 
 </div>
 </section>
-<section id="recap-importance-of-data-visualization-in-scientific-discovery" class="slide level2 smaller">
-<h2><span style="font-size:80%">Recap: Importance of data visualization in scientific discovery</span></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/data-science-wrangle_hadley_wickham.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-<p>Consider clinical and biomedical research discovery lifecycle:</p>
-<ul>
-<li class="fragment">Data visualization purpose in the research lifecycle is to turn raw information into trustworthy, decision-ready evidence</li>
-<li class="fragment">Generate analysis-ready datasets via data visualization in data wrangling</li>
-<li class="fragment">Modeling: visualize effect and outcomes</li>
-<li class="fragment">Improved communication via data storytelling</li>
-</ul>
-</div><p><span style="font-size:60%">Wickham and Grolemund 2017</span></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="recap-importance-of-data-visualization-in-scientific-discovery-1" class="slide level2 smaller">
-<h2><span style="font-size:80%">Recap: Importance of data visualization in scientific discovery</span></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/data-science-wrangle_hadley_wickham.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-<p>Consider clinical and biomedical research discovery lifecycle:</p>
-<ul>
-<li class="fragment">Data visualization purpose in the research lifecycle is to turn raw information into trustworthy, decision-ready evidence</li>
-<li class="fragment">Generate analysis-ready datasets via data visualization in data wrangling</li>
-<li class="fragment">Modeling: visualize effect and outcomes</li>
-<li class="fragment">Improved communication via data storytelling</li>
-</ul>
-</div><p><span style="font-size:60%">Wickham and Grolemund 2017</span></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="guidance-on-effective-visual-communication" class="slide level2 smaller">
-<h2><span style="font-size:80%">Guidance on effective visual communication</span></h2>
-<p><br> <br> <br></p>
-<div class="columns">
-<div class="column" style="width:0%;">
-
-</div><div class="column" style="width:100%;">
-<p>Communication</p>
-<ul>
-<li class="fragment">Enables clear and impactful communication</li>
-<li class="fragment">Facilitates informed decision making</li>
-</ul>
-</div></div>
-<div class="footer">
-
-</div>
-</section>
-<section id="guidance-on-improving-visual-communication" class="slide level2 smaller">
-<h2><span style="font-size:80%">Guidance on Improving visual communication</span></h2>
-<p><br> <br> <br></p>
-<div class="columns">
-<div class="column" style="width:0%;">
-
-</div><div class="column" style="width:100%;">
-<p>Have a clear purpose</p>
-<ul>
-<li class="fragment">Know the purpose of creating the graph</li>
-<li class="fragment">Identify the quantitative evidence to support the purpose</li>
-<li class="fragment">Identify the audience and focus the design to support their needs</li>
-</ul>
-</div></div>
-<div class="footer">
-
-</div>
-</section>
-<section id="guidance-on-improving-visual-communication-1" class="slide level2 smaller">
-<h2><span style="font-size:80%">Guidance on Improving visual communication</span></h2>
-<p><br> <br> <br></p>
-<div class="columns">
-<div class="column" style="width:0%;">
-
-</div><div class="column" style="width:100%;">
-<p>Make the message obvious</p>
-<ul>
-<li class="fragment">Use proximity and alignment to aid comparisons</li>
-<li class="fragment">Use colors and annotations to highlight important details</li>
-</ul>
-</div></div>
-<div class="footer">
-
-</div>
-</section>
-<section id="common-pitfalls-avoiding-misleading-representations" class="slide level2 smaller">
-<h2><span style="font-size:80%">Common pitfalls: Avoiding misleading representations</span></h2>
-<p><br> <br> <br></p>
+<section id="single-message-plot-general-guidance" class="slide level2 smaller">
+<h2><span style="font-size:80%">Single-Message Plot: General Guidance</span></h2>
 <div class="columns">
 <div class="column" style="width:0%;">
 
 </div><div class="column" style="width:100%;">
 <ul>
-<li class="fragment">Overloading visuals with too much data</li>
-<li class="fragment">Misleading representations of data</li>
-<li class="fragment">Small sample sizes and distributions</li>
-<li class="fragment">Cluttered/disorganized plots</li>
+<li>Single-message plot is a visual that communicates one clear take away from categorical data</li>
+<li>Central value of a single-message categorical chart is clarity of interpretation</li>
+<li>Visual makes the intended insight immediately clear</li>
+<li>Categorical plots guide the viewer toward a decision or insight</li>
 </ul>
 </div></div>
 <div class="footer">
 
 </div>
 </section>
-<section id="common-data-visualization-pitfalls" class="slide level2 smaller">
-<h2><span style="font-size:80%">Common data visualization pitfalls</span></h2>
+<section id="instructional-design-for-biomedical-decision-making" class="slide level2 smaller">
+<h2><span style="font-size:60%">Instructional design for biomedical decision-making</span></h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/nature_paper.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-<ul>
-<li class="fragment">Comparison of computational tools (variant callers) that identify disease causing variants from DNA samples</li>
-<li class="fragment">Comparison of 7 callers</li>
-</ul>
+<div class="column" style="width:0%;">
+
+</div><p><strong>Key points for developing single message figures:</strong></p><div class="column" style="width:100%;">
+<ol type="1">
+<li>Define the insight first</li>
+<li>Consider hierarchy of importance</li>
+<li>Design logical flow</li>
+<li>Supporting evidence</li>
+</ol>
 </div></div>
 <div class="footer">
 
 </div>
 </section>
-<section id="common-data-visualization-pitfalls-1" class="slide level2 smaller">
-<h2><span style="font-size:80%">Common data visualization pitfalls</span></h2>
+<section id="section" class="slide level2 smaller">
+<h2><span style="font-size:80%"></span></h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/nature_circle_plot.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-<ul>
-<li class="fragment">Multi-colored mappings
-<ul>
-<li class="fragment">Use color minimally</li>
-</ul></li>
-<li class="fragment">Overcrowded visualizations
-<ul>
-<li class="fragment">Strategy: reduce information via filtering or clustering or use a different layout</li>
-</ul></li>
-</ul>
-</div><p><span style="font-size:60%">Trevarton, A.J., et. al.&nbsp;(2023). Nature Scientific Reports.</span></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="common-data-visualization-pitfalls-2" class="slide level2 smaller">
-<h2><span style="font-size:80%">Common data visualization pitfalls</span></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/upset_callers_xmarks_cutoff35.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-<ul>
-<li class="fragment">Upset plot comparing the performance of 7 callers</li>
-</ul>
-</div></div>
-<div class="footer">
-
-</div>
-</section>
-<section id="misleading-representations-of-data" class="slide level2 smaller">
-<h2><span style="font-size:80%">Misleading representations of data</span></h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img data-src="images/bar_plot_misrep.png" class="border border-thick"></p>
-</div><div class="column" style="width:70%;">
-
-</div><p><span style="font-size:60%">Riedel, N. (2022). Clin Sci Lond.</span></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="distributions-and-sample-sizes" class="slide level2 smaller">
-<h2><span style="font-size:80%">Distributions and sample sizes</span></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-
-</div><div class="column" style="width:50%;">
-
-</div></div>
-<div class="footer">
-
-</div>
-</section>
-<section id="distributions-and-sample-sizes-1" class="slide level2 smaller">
-<h2><span style="font-size:80%">Distributions and sample sizes</span></h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p><img data-src="images/small_sample_n5.png" class="border border-thick"></p>
+<div class="column" style="width:90%;">
+<p><img data-src="images/data_influx.png" class="border border-thick"></p>
 </div><div class="column" style="width:0%;">
 
-</div><p><span style="font-size:60%">Weissgerber, TL. (2019). AHA Circulation.</span></p>
-</div>
+</div></div>
 <div class="footer">
 
 </div>
 </section>
-<section id="distributions-and-sample-sizes-2" class="slide level2 smaller">
-<h2><span style="font-size:80%">Distributions and sample sizes</span></h2>
+<section id="section-1" class="slide level2 smaller">
+<h2><span style="font-size:80%"></span></h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/small_sample_n20.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-
-</div><p><span style="font-size:60%">Weissgerber, TL. (2019). AHA Circulation.</span></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="distributions-and-sample-sizes-3" class="slide level2 smaller">
-<h2><span style="font-size:80%">Distributions and sample sizes</span></h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p><img data-src="images/small_sample_n100.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-
-</div><p><span style="font-size:60%">Weissgerber, TL. (2019). AHA Circulation.</span></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="distributions-and-sample-sizes-4" class="slide level2 smaller">
-<h2><span style="font-size:80%">Distributions and sample sizes</span></h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p><img data-src="images/small_sample_npop.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-
-</div><p><span style="font-size:60%">Weissgerber, TL. (2019). AHA Circulation.</span></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="distributions-and-sample-sizes-5" class="slide level2 smaller">
-<h2><span style="font-size:80%">Distributions and sample sizes</span></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/effective_dotplot.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-
-</div><p><span style="font-size:60%">Weissgerber, TL. (2019). AHA Circulation.</span></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="redesigning-figures-for-insight" class="slide level2 smaller">
-<h2><span style="font-size:80%">Redesigning figures for insight</span></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-
-</div><div class="column" style="width:50%;">
+<div class="column" style="width:90%;">
+<p><img data-src="images/rsearch_progress.png" class="border border-thick"></p>
+</div><div class="column" style="width:0%;">
 
 </div></div>
 <div class="footer">
 
 </div>
 </section>
-<section id="redesigning-figures-for-insight-1" class="slide level2 smaller">
-<h2><span style="font-size:80%">Redesigning figures for insight</span></h2>
+<section id="section-2" class="slide level2 smaller">
+<h2><span style="font-size:80%"></span></h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/box_whisker_left.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-
-</div><p><span style="font-size:60%">Weissgerber, TL. (2019). AHA Circulation.</span></p>
-</div>
+<div class="column" style="width:90%;">
+<p><img data-src="images/thoughts.png" class="border border-thick"></p>
+</div><div class="column" style="width:0%;">
+<p><strong>1. Define the insight first</strong> 2. Consider hierarchy of importance 3. Design logical flow 4. Supporting evidence</p>
+</div></div>
 <div class="footer">
 
 </div>
 </section>
-<section id="redesigning-figures-for-insight-2" class="slide level2 smaller">
-<h2><span style="font-size:80%">Redesigning figures for insight</span></h2>
+<section id="study-background" class="slide level2 smaller">
+<h2><span style="font-size:70%">Study Background</span></h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/box_whisker_right.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-
-</div><p><span style="font-size:60%">Weissgerber, TL. (2019). AHA Circulation.</span></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="redesigning-figures-for-insight-3" class="slide level2 smaller">
-<h2><span style="font-size:80%">Redesigning figures for insight</span></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/nature_good_plot.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-<p><br> <em>Study aim</em>: Can training machine learning models with combined omics data types predict how an individual breast cancer will respond to therapy better than any single assay?</p>
-</div><p><span style="font-size:60%">Sammut, SJ, et. al.&nbsp;(2021). Nature.</span></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="redesigning-figures-for-insight-4" class="slide level2 smaller">
-<h2><span style="font-size:80%">Redesigning figures for insight</span></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/nature_good_plot.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-<p><br> <em>Study aim</em>: Can training machine learning models with combined omics data types predict how an individual breast cancer will respond to therapy better than any single assay?</p>
-<p><em>Figure takeaway</em>: immune activation and tumor mutational burden alone doesn’t guarantee an enhanced therapeutic response</p>
-</div><p><span style="font-size:60%">Sammut, SJ, et. al.&nbsp;(2021). Nature.</span></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="redesigning-figures-for-insight-5" class="slide level2 smaller">
-<h2><span style="font-size:80%">Redesigning figures for insight</span></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/nature_good_plot.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-<p><br> <em>Study aim</em>: Can training machine learning models with combined omics data types predict how an individual breast cancer will respond to therapy better than any single assay?</p>
-<p><em>Figure takeaway</em>: immune activation and tumor mutational burden alone doesn’t guarantee an enhanced therapeutic response</p>
-<p><em>Scatter Plot</em>: (STAT1) is an interferon/immune-activation gene-signature score vs measure of copy-number burden/genomic complexity</p>
-</div><p><span style="font-size:60%">Sammut, SJ, et. al.&nbsp;(2021). Nature.</span></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="redesigning-figures-for-insight-6" class="slide level2 smaller">
-<h2><span style="font-size:80%">Redesigning figures for insight</span></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/nature_good_plot.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-<p><br> <em>Study aim</em>: Can training machine learning models with combined omics data types predict how an individual breast cancer will respond to therapy better than any single assay?</p>
-<p><em>Figure takeaway</em>: immune activation and tumor mutational burden alone doesn’t guarantee an enhanced therapeutic response</p>
-<p><em>Scatter Plot</em>: (STAT1) is an interferon/immune-activation gene-signature score vs measure of copy-number burden/genomic complexity</p>
-<p><em>Scatter Plot (Top Right)</em>: samples that’re STAT1/high CGI are inflamed and high genomic variability</p>
-</div><p><span style="font-size:60%">Sammut, SJ, et. al.&nbsp;(2021). Nature.</span></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="redesigning-figures-for-insight-7" class="slide level2 smaller">
-<h2><span style="font-size:80%">Redesigning figures for insight</span></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/nature_good_plot.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-<p><br> <em>Study aim</em>: Can training machine learning models with combined omics data types predict how an individual breast cancer will respond to therapy better than any single assay?</p>
-<p><em>Figure takeaway</em>: immune activation and tumor mutational burden alone doesn’t guarantee an enhanced therapeutic response</p>
-<p><em>Upper Right</em>: Summary of pathway enrichment for non-responders</p>
-</div><p><span style="font-size:60%">Sammut, SJ, et. al.&nbsp;(2021). Nature.</span></p>
-</div>
-<div class="footer">
-
-</div>
-</section>
-<section id="redesigning-figures-for-insight-8" class="slide level2 smaller">
-<h2><span style="font-size:80%">Redesigning figures for insight</span></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/nature_good_plot.png" class="border border-thick"></p>
-</div><div class="column" style="width:50%;">
-<p><br> <em>Study aim</em>: Can training machine learning models with combined omics data types predict how an individual breast cancer will respond to therapy better than any single assay?</p>
-<p><em>Lower Right</em>: T-cell dysfunction (left) and T-cell exclusion (right) vs response</p>
+<div class="column" style="width:100%;">
+<p><strong>What is CAR-T cell therapy?</strong></p>
 <ul>
-<li class="fragment">Tumour looks “inflamed” at baseline, that alone doesn’t guarantee response</li>
-<li class="fragment">Future recommendations:
-<ul>
-<li class="fragment">combination strategies—e.g., pairing cytotoxic or targeted therapy</li>
-<li class="fragment">Use approaches that reverse T-cell dysfunction and/or overcome exclusion —rather than relying on immune activation alone</li>
-</ul></li>
+<li>CAR-T cell therapy: form of immunotherapy that leverages a patient’s immune system to fight cancer</li>
+<li>Researchers genetically engineer a patient’s T cells to express receptors (chimeric antigen receptors - CARs) that recognize specific antigens on cancer cells</li>
+<li>Genetically re-engineered T-cells (CAR-T cells) are re-infused into the patient where the T cells seek out and destroy tumor cells</li>
+<li>Often used to treat: hematologic cancers like acute lymphoblastic leukemia (ALL) and diffuse large B-cell lymphoma (DLBCL)</li>
 </ul>
-</div><p><span style="font-size:40%">*pCR : pathological complete response (i.e., no residual invasive cancer found at surgery)</span></p><p><span style="font-size:40%">*RD : residual disease (i.e., cancer still detectable at surgery</span></p><p><span style="font-size:60%">Sammut, SJ, et. al.&nbsp;(2021). Nature.</span></p>
+</div><div class="column" style="width:0%;">
+
+</div><p><span style="font-size:60%">Chohan KL, et al.&nbsp;(2023). Curr Hematol Malig Rep.</span></p>
 </div>
 <div class="footer">
 
 </div>
+</section>
+<section id="study-background-1" class="slide level2 smaller">
+<h2><span style="font-size:70%">Study Background</span></h2>
+<div class="columns">
+<div class="column" style="width:100%;">
+<p><strong>How are adverse events measured?</strong></p>
+<ul>
+<li>CAR-T therapy is a form of immunotherapy that stimulates the immune system to attack cancer that can have a range of side effects:</li>
+<li>Grades 1–5 refer to the severity of adverse events or toxicities:</li>
+<li><strong>Grade 1 (Mild)</strong>: minimal symptoms; does not require intervention (i.e.: mild rash)</li>
+<li><strong>Grade 2 (Moderate)</strong>: symptoms are more noticeable and may require minimal medical intervention (moderate nausea)</li>
+</ul>
+</div><div class="column" style="width:0%;">
+
+</div></div>
+<div class="footer">
+
+</div>
+</section>
+<section id="study-background-2" class="slide level2 smaller">
+<h2><span style="font-size:70%">Study Background</span></h2>
+<div class="columns">
+<div class="column" style="width:100%;">
+<p><strong>How are adverse events measured?</strong></p>
+<ul>
+<li><strong>Grade 3 (Severe)</strong>: medically significant and requires intervention, possibly hospitalization (i.e.: severe organ dysfunction)</li>
+<li><strong>Grade 4 (Life-Threatening)</strong>: urgent, life-threatening consequences; requires immediate medical intervention (i.e.: respiratory failure)</li>
+<li><strong>Grade 5 (Death)</strong>: toxicity results in patient death</li>
+</ul>
+</div><div class="column" style="width:0%;">
+
+</div></div>
+<div class="footer">
+
+</div>
+</section>
+<section id="research-question" class="slide level2 smaller">
+<h2><span style="font-size:70%">Research Question</span></h2>
+<div class="columns">
+<div class="column" style="width:100%;">
+<ul>
+<li>What is the distribution and severity of toxicities experienced by patients receiving CAR-T cell therapy?</li>
+<li>What proportion experience low-grade versus high-grade events?</li>
+</ul>
+</div><div class="column" style="width:0%;">
+
+</div></div>
+<div class="footer">
+
+</div>
+</section>
+<section id="section-3" class="slide level2 smaller">
+<h2><span style="font-size:80%"></span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/thoughts.png" class="border border-thick"></p>
+</div><div class="column" style="width:50%;">
+<p><strong>1. Define the insight first</strong></p>
+<ol start="2" type="1">
+<li><p>Consider hierarchy of importance</p></li>
+<li><p>Design logical flow</p></li>
+<li><p>Supporting evidence</p></li>
+</ol>
+</div></div>
+<div class="footer">
+
+</div>
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+</section>
+<section id="define-the-insight-first" class="slide level2">
+<h2>Define the insight first</h2>
+<div class="columns">
+<div class="column small">
+<p><em>Task</em>: Define central message that drives the design of the plot</p>
+<p>After evaluating your patient data show:</p>
+<p>Most patients experience only Grade 1–2 toxicities as shown by ordering of lines in plot</p>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="test_2_082025_files/figure-revealjs/unnamed-chunk-1-1.png" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+</section>
+<section id="section-4" class="slide level2 smaller">
+<h2><span style="font-size:80%"></span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/thoughts.png" class="border border-thick"></p>
+</div><div class="column" style="width:50%;">
+<ol type="1">
+<li>Define the insight first</li>
+</ol>
+<p><strong>2. Consider hierarchy of importance</strong></p>
+<ol start="3" type="1">
+<li><p>Design logical flow</p></li>
+<li><p>Supporting evidence</p></li>
+</ol>
+</div></div>
+<div class="footer">
+
+</div>
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+</section>
+<section id="hierarchy-of-importance" class="slide level2">
+<h2>Hierarchy of Importance</h2>
+<div class="columns">
+<div class="column small">
+<p><em>Task</em>: Key categories are visually prioritized</p>
+<p>After evaluating your patient data show:</p>
+<ul>
+<li>The intervention you developed is safe for most of the patients in your study</li>
+<li>Most patients experience only Grade 1–2 toxicities</li>
+<li>Grades 1–2 are visually emphasized with coral color, signaling they are the most important part of the story</li>
+<li>Grades 3–5 are muted grey, still visible for context but clearly secondary</li>
+</ul>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="test_2_082025_files/figure-revealjs/unnamed-chunk-2-1.png" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+</section>
+<section id="section-5" class="slide level2 smaller">
+<h2><span style="font-size:80%"></span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/thoughts.png" class="border border-thick"></p>
+</div><div class="column" style="width:50%;">
+<ol type="1">
+<li><p>Define the insight first</p></li>
+<li><p>Consider hierarchy of importance</p></li>
+</ol>
+<p><strong>3. Design logical flow</strong></p>
+<ol start="4" type="1">
+<li>Supporting evidence</li>
+</ol>
+</div></div>
+<div class="footer">
+
+</div>
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+</section>
+<section id="logical-ordering" class="slide level2">
+<h2>Logical ordering</h2>
+<div class="columns">
+<div class="column small">
+<p>Categories flow in a way that reinforces the central point</p>
+<p><strong>X-axis ordering</strong>: Grades 1–5 are sequential, reflecting the natural progression of toxicity severity</p>
+<p><strong>Y-axis</strong>: Total count of patients experiencing each grade (CRS + Neurotoxicity) communicates magnitude clearly</p>
+<p><strong>Lollipop design</strong>: Length of the bar (frequency) draws attention to the point of interest</p>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="test_2_082025_files/figure-revealjs/unnamed-chunk-3-1.png" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+</section>
+<section id="section-6" class="slide level2 smaller">
+<h2><span style="font-size:80%"></span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/thoughts.png" class="border border-thick"></p>
+</div><div class="column" style="width:50%;">
+<ol type="1">
+<li><p>Define the insight first</p></li>
+<li><p>Consider hierarchy of importance</p></li>
+<li><p>Design logical flow</p></li>
+</ol>
+<p><strong>4. Supporting evidence</strong></p>
+</div></div>
+<div class="footer">
+
+</div>
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+</section>
+<section id="visual-guidance" class="slide level2">
+<h2>Visual Guidance</h2>
+<div class="columns">
+<div class="column small">
+<p><strong>Direct the viewer’s attention to the most important category while providing context for comparison</strong></p>
+<p><strong>Highlighting key grades</strong>: Immediately draws the eye to Grades 1–2</p>
+<p><strong>Minimal gridlines and no legend clutter</strong>: Reduces distractions and ensures the story is read instantly</p>
+<p><strong>Labels (optional)</strong> could reinforce counts if necessary</p>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="test_2_082025_files/figure-revealjs/unnamed-chunk-4-1.png" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
 </section>
 <section id="summary" class="slide level2 smaller">
 <h2><span style="font-size:80%">Summary</span></h2>
 <div class="columns">
 <div class="column" style="width:0%;">
-<p><img data-src="images/nature_good_plot.png" class="border border-thick"></p>
-</div><div class="column" style="width:100%;">
+
+</div><div class="column" style="width:90%;">
+<p>When developing a single-message figure:</p>
+<p>Visual that provides clarity of interpretation;</p>
 <ul>
-<li class="fragment">Consider visualization as part of your research strategy</li>
-<li class="fragment">Certain figure representation choices could create bias and overconfidence</li>
-<li class="fragment">Choose visualizations that make data comparisons obvious</li>
+<li>Viewer instantly understands the main insight</li>
+</ul>
+<p>Make the Intended Insight Immediately Clear:</p>
+<ul>
+<li><p>Before plotting, ask: “What is the single insight I want my audience to take away?”</p></li>
+<li><p>The entire visual structure — the arrangement of categories, ordering, and supporting elements — should make this insight obvious at first glance</p></li>
 </ul>
 </div></div>
 <div class="footer">
@@ -769,6 +714,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

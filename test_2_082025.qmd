@@ -1,5 +1,5 @@
 ---
-title: "Data visualization strategies and Discussion on common pitfalls"
+title: "Clarity Through Categories: <br>Designing Interpretive Visuals for <br>Biomedical Categorical Data - Part 2"
 author: "<br><br><span style='font-size:25px;'><strong>Lesley Chapman Hannah, Ph.D., M.S.</strong></span><br>College of Graduate Studies<br>Northeast Ohio Medical University"
 
 format: 
@@ -15,156 +15,17 @@ format:
     
 ---
 
-## Lecture Overview
+## Lecture Goal
 
 
-::: incremental
-- Review: Data visualization practices in biomedical and clinical research
-- Discuss common data visualization pitfalls
-- Strategies for redesigning figures for insight
-
-
-:::
-
+Discuss how to develop a single-message categorical chart for a biomedical research task
 
 ::: footer
 
 :::
 
 
-## <span style="font-size:80%">Recap: Importance of data visualization in scientific discovery</span> {.smaller}
-
-::: columns
-::: {.column width="50%"}
-![](images/data-science-wrangle_hadley_wickham.png){.border .border-thick}
-:::
-
-::: {.column width="50%"}
-Consider clinical and biomedical research discovery lifecycle:
-
-::: incremental
-- Data visualization purpose in the research lifecycle is to turn raw information into trustworthy, decision-ready evidence
-- Generate analysis-ready datasets via data visualization in data wrangling
-- Modeling: visualize effect and outcomes
-- Improved communication via data storytelling
-
-
-
-:::
-:::
-<span style="font-size:60%">Wickham and Grolemund 2017</span>
-:::
-::: footer
-:::
-
-
-## <span style="font-size:80%">Recap: Importance of data visualization in scientific discovery</span> {.smaller}
-
-::: columns
-::: {.column width="50%"}
-![](images/data-science-wrangle_hadley_wickham.png){.border .border-thick}
-:::
-
-::: {.column width="50%"}
-Consider clinical and biomedical research discovery lifecycle:
-
-::: incremental
-- Data visualization purpose in the research lifecycle is to turn raw information into trustworthy, decision-ready evidence
-- Generate analysis-ready datasets via data visualization in data wrangling
-- Modeling: visualize effect and outcomes
-- Improved communication via data storytelling
-
-
-
-:::
-:::
-<span style="font-size:60%">Wickham and Grolemund 2017</span>
-:::
-::: footer
-:::
-
-
-
-
-## <span style="font-size:80%">Guidance on effective visual communication</span> {.smaller}
-<br>
-<br>
-<br>
-
-::: columns
-::: {.column width="0%"}
-
-:::
-
-::: {.column width="100%"}
-Communication
-
-::: incremental
-- Enables clear and impactful communication
-- Facilitates informed decision making
-:::
-:::
-
-:::
-::: footer
-:::
-
-## <span style="font-size:80%">Guidance on Improving visual communication</span> {.smaller}
-<br>
-<br>
-<br>
-
-::: columns
-::: {.column width="0%"}
-
-:::
-
-::: {.column width="100%"}
-Have a clear purpose
-
-::: incremental
-- Know the purpose of creating the graph
-- Identify the quantitative evidence to support the purpose
-- Identify the audience and focus the design to support their needs
-
-:::
-:::
-
-:::
-::: footer
-:::
-
-
-## <span style="font-size:80%">Guidance on Improving visual communication</span> {.smaller}
-<br>
-<br>
-<br>
-
-::: columns
-::: {.column width="0%"}
-
-:::
-
-::: {.column width="100%"}
-Make the message obvious
-
-::: incremental
-- Use proximity and alignment to aid comparisons
-- Use colors and annotations to highlight important details
-
-
-:::
-:::
-
-:::
-::: footer
-:::
-
-
-## <span style="font-size:80%">Common pitfalls: Avoiding misleading representations</span> {.smaller}
-<br>
-<br>
-<br>
+## <span style="font-size:80%">Single-Message Plot: General Guidance</span> {.smaller}
 
 ::: columns
 ::: {.column width="0%"}
@@ -173,16 +34,32 @@ Make the message obvious
 
 ::: {.column width="100%"}
 
-
-::: incremental
-- Overloading visuals with too much data
-- Misleading representations of data
-- Small sample sizes and distributions
-- Cluttered/disorganized plots
-
-
+- Single-message plot is a visual that communicates one clear take away from categorical data
+- Central value of a single-message categorical chart is clarity of interpretation
+- Visual makes the intended insight immediately clear
+- Categorical plots guide the viewer toward a decision or insight
 
 :::
+
+:::
+::: footer
+:::
+
+## <span style="font-size:60%">Instructional design for biomedical decision-making</span> {.smaller}
+
+::: columns
+::: {.column width="0%"}
+
+:::
+
+**Key points for developing single message figures:**
+
+::: {.column width="100%"}
+
+1. Define the insight first
+2. Consider hierarchy of importance
+3. Design logical flow
+4. Supporting evidence
 :::
 
 :::
@@ -190,146 +67,11 @@ Make the message obvious
 :::
 
 
-## <span style="font-size:80%">Common data visualization pitfalls</span> {.smaller}
+## <span style="font-size:80%"></span> {.smaller}
 
 ::: columns
-::: {.column width="50%"}
-![](images/nature_paper.png){.border .border-thick}
-
-
-:::
-
-::: {.column width="50%"}
-
-
-::: incremental
-- Comparison of computational tools (variant callers) that identify disease causing variants  from DNA samples
-- Comparison of 7 callers
-
-
-:::
-:::
-:::
-::: footer
-:::
-
-
-## <span style="font-size:80%">Common data visualization pitfalls</span> {.smaller}
-
-::: columns
-::: {.column width="50%"}
-![](images/nature_circle_plot.png){.border .border-thick}
-
-
-:::
-
-::: {.column width="50%"}
-
-
-::: incremental
-- Multi-colored mappings
-    - Use color minimally 
-- Overcrowded visualizations 
-    - Strategy: reduce information via filtering or clustering or use a different layout
-
-
-
-:::
-:::
-<span style="font-size:60%">Trevarton, A.J., et. al. (2023). Nature Scientific Reports.</span>
-:::
-::: footer
-:::
-
-
-## <span style="font-size:80%">Common data visualization pitfalls</span> {.smaller}
-
-::: columns
-::: {.column width="50%"}
-![](images/upset_callers_xmarks_cutoff35.png){.border .border-thick}
-
-
-:::
-
-::: {.column width="50%"}
-
-
-::: incremental
-- Upset plot comparing the performance of 7 callers
-
-
-
-:::
-:::
-:::
-::: footer
-:::
-
-
-
-
-
-
-## <span style="font-size:80%">Misleading representations of data</span> {.smaller}
-
-::: columns
-::: {.column width="30%"}
-![](images/bar_plot_misrep.png){.border .border-thick}
-
-
-:::
-
-::: {.column width="70%"}
-
-
-::: incremental
-
-
-
-
-:::
-:::
-<span style="font-size:60%">Riedel, N. (2022). Clin Sci Lond.</span>
-:::
-::: footer
-:::
-
-
-
-
-## <span style="font-size:80%">Distributions and sample sizes</span> {.smaller}
-
-::: columns
-::: {.column width="50%"}
-
-
-
-:::
-
-::: {.column width="50%"}
-
-
-::: incremental
-
-
-
-
-:::
-:::
-
-:::
-::: footer
-:::
-
-
-
-## <span style="font-size:80%">Distributions and sample sizes</span> {.smaller}
-
-::: columns
-::: {.column width="60%"}
-![](images/small_sample_n5.png){.border .border-thick}
-
-
+::: {.column width="90%"}
+![](images/data_influx.png){.border .border-thick}
 :::
 
 ::: {.column width="0%"}
@@ -338,11 +80,55 @@ Make the message obvious
 ::: incremental
 
 
+:::
+:::
+
+:::
+::: footer
+:::
+
+
+
+## <span style="font-size:80%"></span> {.smaller}
+
+::: columns
+::: {.column width="90%"}
+![](images/rsearch_progress.png){.border .border-thick}
+:::
+
+::: {.column width="0%"}
+
+
+::: incremental
 
 
 :::
 :::
-<span style="font-size:60%">Weissgerber, TL. (2019). AHA Circulation.</span>
+
+:::
+::: footer
+:::
+
+
+## <span style="font-size:80%"></span> {.smaller}
+
+::: columns
+::: {.column width="90%"}
+![](images/thoughts.png){.border .border-thick}
+:::
+
+::: {.column width="0%"}
+
+
+::: incremental
+**1. Define the insight first**
+2. Consider hierarchy of importance
+3. Design logical flow
+4. Supporting evidence
+
+:::
+:::
+
 :::
 ::: footer
 :::
@@ -350,18 +136,32 @@ Make the message obvious
 
 
 
-## <span style="font-size:80%">Distributions and sample sizes</span> {.smaller}
+
+
+
+
+
+
+
+
+
+
+
+
+## <span style="font-size:70%">Study Background</span> {.smaller}
 
 ::: columns
-::: {.column width="50%"}
-![](images/small_sample_n20.png){.border .border-thick}
+::: {.column width="100%"}
+**What is CAR-T cell therapy?**
 
+- CAR-T cell therapy: form of immunotherapy that leverages a patient’s immune system to fight cancer
+- Researchers genetically engineer a patient’s T cells to express receptors (chimeric antigen receptors - CARs) that recognize specific antigens on cancer cells
+- Genetically re-engineered T-cells (CAR-T cells) are  re-infused into the patient where the T cells seek out and destroy tumor cells
+- Often used to treat: hematologic cancers like acute lymphoblastic leukemia (ALL) and diffuse large B-cell lymphoma (DLBCL)
 
 :::
 
-::: {.column width="50%"}
-
-
+::: {.column width="0%"}
 ::: incremental
 
 
@@ -369,107 +169,26 @@ Make the message obvious
 
 :::
 :::
-<span style="font-size:60%">Weissgerber, TL. (2019). AHA Circulation.</span>
+<span style="font-size:60%">Chohan KL, et al. (2023). Curr Hematol Malig Rep.</span>
 :::
 ::: footer
 :::
 
 
-## <span style="font-size:80%">Distributions and sample sizes</span> {.smaller}
+## <span style="font-size:70%">Study Background</span> {.smaller}
 
 ::: columns
-::: {.column width="60%"}
-![](images/small_sample_n100.png){.border .border-thick}
+::: {.column width="100%"}
+**How are adverse events measured?** 
 
-
-:::
-
-::: {.column width="50%"}
-
-
-::: incremental
-
-
-
-
-:::
-:::
-<span style="font-size:60%">Weissgerber, TL. (2019). AHA Circulation.</span>
-:::
-::: footer
-:::
-
-## <span style="font-size:80%">Distributions and sample sizes</span> {.smaller}
-
-::: columns
-::: {.column width="60%"}
-![](images/small_sample_npop.png){.border .border-thick}
-
+- CAR-T therapy is a form of immunotherapy that stimulates the immune system to attack cancer that can have a range of side effects:
+- Grades 1–5 refer to the severity of adverse events or toxicities:
+- **Grade 1 (Mild)**: minimal symptoms; does not require intervention (i.e.: mild rash)
+- **Grade 2 (Moderate)**: symptoms are more noticeable and may require minimal medical intervention (moderate nausea)
 
 :::
 
-::: {.column width="50%"}
-
-
-::: incremental
-
-
-
-
-:::
-:::
-<span style="font-size:60%">Weissgerber, TL. (2019). AHA Circulation.</span>
-:::
-::: footer
-:::
-
-
-
-
-## <span style="font-size:80%">Distributions and sample sizes</span> {.smaller}
-
-::: columns
-::: {.column width="50%"}
-![](images/effective_dotplot.png){.border .border-thick}
-
-
-:::
-
-::: {.column width="50%"}
-
-
-::: incremental
-
-
-
-
-:::
-:::
-<span style="font-size:60%">Weissgerber, TL. (2019). AHA Circulation.</span>
-:::
-::: footer
-:::
-
-
-
-
-
-
-
-
-
-## <span style="font-size:80%">Redesigning figures for insight</span> {.smaller}
-
-::: columns
-::: {.column width="50%"}
-
-
-
-:::
-
-::: {.column width="50%"}
-
-
+::: {.column width="0%"}
 ::: incremental
 
 
@@ -482,19 +201,19 @@ Make the message obvious
 ::: footer
 :::
 
-
-## <span style="font-size:80%">Redesigning figures for insight</span> {.smaller}
+## <span style="font-size:70%">Study Background</span> {.smaller}
 
 ::: columns
-::: {.column width="50%"}
-![](images/box_whisker_left.png){.border .border-thick}
+::: {.column width="100%"}
+**How are adverse events measured?**
 
+- **Grade 3 (Severe)**: medically significant and requires intervention, possibly hospitalization (i.e.: severe organ dysfunction)
+- **Grade 4 (Life-Threatening)**: urgent, life-threatening consequences; requires immediate medical intervention (i.e.: respiratory failure)
+- **Grade 5 (Death)**: toxicity results in patient death
 
 :::
 
-::: {.column width="50%"}
-
-
+::: {.column width="0%"}
 ::: incremental
 
 
@@ -502,24 +221,24 @@ Make the message obvious
 
 :::
 :::
-<span style="font-size:60%">Weissgerber, TL. (2019). AHA Circulation.</span>
+
 :::
 ::: footer
 :::
 
 
-## <span style="font-size:80%">Redesigning figures for insight</span> {.smaller}
+## <span style="font-size:70%">Research Question</span> {.smaller}
 
 ::: columns
-::: {.column width="50%"}
-![](images/box_whisker_right.png){.border .border-thick}
+::: {.column width="100%"}
+
+- What is the distribution and severity of toxicities experienced by patients receiving CAR-T cell therapy? 
+- What proportion experience low-grade versus high-grade events?
 
 
 :::
 
-::: {.column width="50%"}
-
-
+::: {.column width="0%"}
 ::: incremental
 
 
@@ -527,200 +246,453 @@ Make the message obvious
 
 :::
 :::
-<span style="font-size:60%">Weissgerber, TL. (2019). AHA Circulation.</span>
+
 :::
 ::: footer
 :::
 
 
 
-
-## <span style="font-size:80%">Redesigning figures for insight</span> {.smaller}
+## <span style="font-size:80%"></span> {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
-![](images/nature_good_plot.png){.border .border-thick}
-
-
+![](images/thoughts.png){.border .border-thick}
 :::
 
 ::: {.column width="50%"}
-<br>
-*Study aim*: Can training machine learning models with combined omics data types predict how an individual breast cancer will respond to therapy better than any single assay?
-
-::: incremental
 
 
+**1. Define the insight first**
 
+2. Consider hierarchy of importance
+
+3. Design logical flow
+
+4. Supporting evidence
 
 :::
-:::
-<span style="font-size:60%">Sammut, SJ, et. al. (2021). Nature.</span>
+
 :::
 ::: footer
 :::
 
 
 
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+
+## Define the insight first
 
 
-## <span style="font-size:80%">Redesigning figures for insight</span> {.smaller}
+::: columns
+::: {.column .small}
+
+*Task*: Define central message that drives the design of the plot
+
+After evaluating your patient data show:
+
+Most patients experience only Grade 1–2 toxicities as shown by ordering of lines in plot
+
+:::
+::: column
+
+```{r}
+#| fig-width: 8
+#| fig-height: 9
+
+# Install/Load Libraries
+library(ggplot2)
+library(dplyr)
+
+# Simulate data
+toxicity_data <- data.frame(
+  Toxicity = factor(paste("Grade", 1:5), levels = paste("Grade", 1:5)),
+  CRS_Count = c(30, 25, 10, 5, 2),
+  Neuro_Count = c(28, 22, 12, 4, 1)
+)
+
+# Summarize total events
+toxicity_data <- toxicity_data %>%
+  mutate(Total_Count = CRS_Count + Neuro_Count)
+
+# Generate grey lollipop plot
+ggplot(toxicity_data, aes(x = Toxicity, y = Total_Count)) +
+  geom_segment(aes(xend = Toxicity, y = 0, yend = Total_Count), size = 1, color = "grey50") +
+  geom_point(size = 4, color = "grey30") +
+  labs(
+    title = "CAR-T Therapy Toxicity Grades",
+    subtitle = "Most patients experience only Grade 1–2 toxicities",
+    x = "Toxicity Grade",
+    y = "Number of Patients"
+  ) +
+  theme_minimal(base_size = 15) +
+  theme(
+    panel.grid = element_blank(),
+    plot.title = element_text(face = "bold")
+  )
+
+
+
+```
+:::
+:::
+
+
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+
+
+## <span style="font-size:80%"></span> {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
-![](images/nature_good_plot.png){.border .border-thick}
-
-
+![](images/thoughts.png){.border .border-thick}
 :::
 
 ::: {.column width="50%"}
-<br>
-*Study aim*: Can training machine learning models with combined omics data types predict how an individual breast cancer will respond to therapy better than any single assay?
-
-::: incremental
-*Figure takeaway*: immune activation and tumor mutational burden alone doesn’t guarantee an enhanced therapeutic response
 
 
+1. Define the insight first
+
+**2. Consider hierarchy of importance**
+
+3. Design logical flow
+
+4. Supporting evidence
 
 :::
-:::
-<span style="font-size:60%">Sammut, SJ, et. al. (2021). Nature.</span>
+
 :::
 ::: footer
 :::
 
-## <span style="font-size:80%">Redesigning figures for insight</span> {.smaller}
+
+
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+
+## Hierarchy of Importance
+
+::: columns
+::: {.column .small}
+
+*Task*: Key categories are visually prioritized
+
+After evaluating your patient data show:
+
+  - The intervention you developed is safe for most of the patients in your study
+  - Most patients experience only Grade 1–2 toxicities
+  - Grades 1–2 are visually emphasized with coral color, signaling they are the most important part of the story
+  - Grades 3–5 are muted grey, still visible for context but clearly secondary
+
+:::
+::: column
+
+```{r}
+#| fig-width: 8
+#| fig-height: 9
+
+#Install Load/Libraries
+library(ggplot2)
+library(dplyr)
+
+# Simulate data
+toxicity_data <- data.frame(
+  Toxicity = factor(paste("Grade", 1:5), levels = paste("Grade", 1:5)),
+  CRS_Count = c(30, 25, 10, 5, 2),
+  Neuro_Count = c(28, 22, 12, 4, 1)
+)
+
+# Summarize total events for simplicity
+toxicity_data <- toxicity_data %>%
+  mutate(Total_Count = CRS_Count + Neuro_Count,
+         Highlight = ifelse(Toxicity %in% c("Grade 1", "Grade 2"), "Highlight", "Other"))
+
+# Generate plot
+ggplot(toxicity_data, aes(x = Toxicity, y = Total_Count, color = Highlight)) +
+  geom_segment(aes(xend = Toxicity, y = 0, yend = Total_Count), size = 1) +
+  geom_point(size = 4) +
+  scale_color_manual(values = c("Highlight" = "coral", "Other" = "grey70")) +
+  labs(
+    title = "CAR-T Therapy Toxicity Grades",
+    subtitle = "Most patients experience only Grade 1–2 toxicities",
+    x = "Toxicity Grade",
+    y = "Number of Patients"
+  ) +
+  theme_minimal(base_size = 15) +
+  theme(
+    panel.grid = element_blank(),
+    legend.position = "none",
+    plot.title = element_text(face = "bold")
+  )
+```
+:::
+:::
+
+
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+
+
+## <span style="font-size:80%"></span> {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
-![](images/nature_good_plot.png){.border .border-thick}
-
-
+![](images/thoughts.png){.border .border-thick}
 :::
 
 ::: {.column width="50%"}
-<br>
-*Study aim*: Can training machine learning models with combined omics data types predict how an individual breast cancer will respond to therapy better than any single assay?
 
-::: incremental
-*Figure takeaway*: immune activation and tumor mutational burden alone doesn’t guarantee an enhanced therapeutic response
 
-*Scatter Plot*: (STAT1) is an interferon/immune-activation gene-signature score vs measure of copy-number burden/genomic complexity
+1. Define the insight first
+
+2. Consider hierarchy of importance
+
+**3. Design logical flow**
+
+4. Supporting evidence
 
 :::
-:::
-<span style="font-size:60%">Sammut, SJ, et. al. (2021). Nature.</span>
+
 :::
 ::: footer
 :::
 
-## <span style="font-size:80%">Redesigning figures for insight</span> {.smaller}
+
+
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+
+## Logical ordering
+
+::: columns
+::: {.column .small}
+
+Categories flow in a way that reinforces the central point
+
+**X-axis ordering**: Grades 1–5 are sequential, reflecting the natural progression of toxicity severity
+
+**Y-axis**: Total count of patients experiencing each grade (CRS + Neurotoxicity) communicates magnitude clearly
+
+**Lollipop design**: Length of the bar (frequency) draws attention to the point of interest
+
+:::
+::: column
+
+```{r}
+#| fig-width: 8
+#| fig-height: 9
+
+#Install Load/Libraries
+library(ggplot2)
+library(dplyr)
+
+# Simulate data
+toxicity_data <- data.frame(
+  Toxicity = factor(paste("Grade", 1:5), levels = paste("Grade", 1:5)),
+  CRS_Count = c(30, 25, 10, 5, 2),
+  Neuro_Count = c(28, 22, 12, 4, 1)
+)
+
+# Summarize total events and create highlight for Grades 1–2
+toxicity_data <- toxicity_data %>%
+  mutate(Total_Count = CRS_Count + Neuro_Count,
+         Highlight = ifelse(Toxicity %in% c("Grade 1", "Grade 2"), "Highlight", "Other"))
+
+# Generate plot
+ggplot(toxicity_data, aes(x = Toxicity, y = Total_Count, color = Highlight)) +
+  geom_segment(aes(xend = Toxicity, y = 0, yend = Total_Count), size = 1) +
+  geom_point(size = 4) +
+  geom_text(aes(label = Total_Count), vjust = -0.5, size = 5) +  # Optional labels
+  scale_color_manual(values = c("Highlight" = "coral", "Other" = "grey70")) +
+  labs(
+    title = "CAR-T Therapy Toxicity Grades",
+    subtitle = "Most patients experience only Grade 1–2 toxicities",
+    x = "Toxicity Grade",
+    y = "Number of Patients"
+  ) +
+  theme_minimal(base_size = 15) +
+  theme(
+    panel.grid = element_blank(),  # minimal gridlines
+    legend.position = "none",      # no legend clutter
+    plot.title = element_text(face = "bold")
+  )
+
+```
+:::
+:::
+
+
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+
+
+## <span style="font-size:80%"></span> {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
-![](images/nature_good_plot.png){.border .border-thick}
-
-
+![](images/thoughts.png){.border .border-thick}
 :::
 
 ::: {.column width="50%"}
-<br>
-*Study aim*: Can training machine learning models with combined omics data types predict how an individual breast cancer will respond to therapy better than any single assay?
 
-::: incremental
-*Figure takeaway*: immune activation and tumor mutational burden alone doesn’t guarantee an enhanced therapeutic response
 
-*Scatter Plot*: (STAT1) is an interferon/immune-activation gene-signature score vs measure of copy-number burden/genomic complexity
+1. Define the insight first
 
-*Scatter Plot (Top Right)*: samples that’re STAT1/high CGI are inflamed and high genomic variability
+2. Consider hierarchy of importance
+
+3. Design logical flow
+
+**4. Supporting evidence**
 
 :::
-:::
-<span style="font-size:60%">Sammut, SJ, et. al. (2021). Nature.</span>
+
 :::
 ::: footer
 :::
 
 
-## <span style="font-size:80%">Redesigning figures for insight</span> {.smaller}
+
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
+
+## Visual Guidance
+
 
 ::: columns
-::: {.column width="50%"}
-![](images/nature_good_plot.png){.border .border-thick}
+::: {.column .small}
 
+**Direct the viewer’s attention to the most important category while providing context for comparison**
 
-:::
+**Highlighting key grades**: Immediately draws the eye to Grades 1–2
 
-::: {.column width="50%"}
-<br>
-*Study aim*: Can training machine learning models with combined omics data types predict how an individual breast cancer will respond to therapy better than any single assay?
+**Minimal gridlines and no legend clutter**: Reduces distractions and ensures the story is read instantly
 
-::: incremental
-*Figure takeaway*: immune activation and tumor mutational burden alone doesn’t guarantee an enhanced therapeutic response
-
-*Upper Right*: Summary of pathway enrichment for non-responders
+**Labels (optional)** could reinforce counts if necessary
 
 :::
+::: column
+
+```{r}
+#| fig-width: 8
+#| fig-height: 9
+
+# Install/Load Libraries
+library(ggplot2)
+library(dplyr)
+
+# Simulate data
+toxicity_data <- data.frame(
+  Toxicity = factor(paste("Grade", 1:5), levels = paste("Grade", 1:5)),
+  CRS_Count = c(30, 25, 10, 5, 2),
+  Neuro_Count = c(28, 22, 12, 4, 1)
+)
+
+# Summarize total events and flag Grades 1–2 for highlighting
+toxicity_data <- toxicity_data %>%
+  mutate(
+    Total_Count = CRS_Count + Neuro_Count,
+    Highlight = ifelse(Toxicity %in% c("Grade 1", "Grade 2"), "Highlight", "Other")
+  )
+
+# Generate minimalist, focus-driven plot
+ggplot(toxicity_data, aes(x = Toxicity, y = Total_Count)) +
+  # Base segments for all grades (light gray for context)
+  geom_segment(aes(xend = Toxicity, y = 0, yend = Total_Count),
+               color = "grey80", size = 1) +
+  
+  # Highlighted segments and points for Grades 1–2
+  geom_segment(
+    data = filter(toxicity_data, Highlight == "Highlight"),
+    aes(xend = Toxicity, y = 0, yend = Total_Count),
+    color = "coral", size = 1.5
+  ) +
+  geom_point(
+    data = filter(toxicity_data, Highlight == "Highlight"),
+    aes(y = Total_Count),
+    color = "coral", size = 5
+  ) +
+  geom_point(
+    data = filter(toxicity_data, Highlight == "Other"),
+    aes(y = Total_Count),
+    color = "grey70", size = 4
+  ) +
+  
+  # Optional labels reinforcing counts
+  geom_text(
+    aes(label = Total_Count),
+    vjust = -0.6,
+    size = 5,
+    color = "black"
+  ) +
+  
+  # Titles and labels
+  labs(
+    title = "CAR-T Therapy Toxicity Grades",
+    subtitle = "Grades 1–2 dominate patient experiences; higher grades are rare",
+    x = "Toxicity Grade",
+    y = "Number of Patients"
+  ) +
+  
+  # Minimalist theme: clean grid, no legend, clear text hierarchy
+  theme_minimal(base_size = 15) +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.ticks = element_blank(),
+    legend.position = "none",
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(margin = margin(b = 10))
+  )
+
+```
 :::
-<span style="font-size:60%">Sammut, SJ, et. al. (2021). Nature.</span>
-:::
-::: footer
 :::
 
 
-## <span style="font-size:80%">Redesigning figures for insight</span> {.smaller}
+<style>
+.tiny-table table { font-size: 0.8em; }        /* adjust as needed (0.8–0.9em) */
+.tiny-table figcaption, .tiny-table .table-caption { font-size: 0.75em; }
+</style>
 
-::: columns
-::: {.column width="50%"}
-![](images/nature_good_plot.png){.border .border-thick}
-
-
-:::
-
-::: {.column width="50%"}
-<br>
-*Study aim*: Can training machine learning models with combined omics data types predict how an individual breast cancer will respond to therapy better than any single assay?
-
-*Lower Right*: T-cell dysfunction (left) and T-cell exclusion (right) vs response
-
-::: incremental
--  Tumour looks “inflamed” at baseline, that alone doesn’t guarantee response
-- Future recommendations: 
-  - combination strategies—e.g., pairing cytotoxic or targeted therapy
-  - Use approaches that reverse T-cell dysfunction and/or overcome exclusion —rather than relying on immune activation alone
-
-:::
-
-
-:::
-<span style="font-size:40%">*pCR : pathological complete response (i.e., no residual invasive cancer found at surgery)</span>
-
-<span style="font-size:40%">*RD : residual disease (i.e., cancer still detectable at surgery</span>
-
-<span style="font-size:60%">Sammut, SJ, et. al. (2021). Nature.</span>
-:::
-::: footer
-:::
 
 
 ## <span style="font-size:80%">Summary</span> {.smaller}
 
 ::: columns
 ::: {.column width="0%"}
-![](images/nature_good_plot.png){.border .border-thick}
-
 
 :::
 
-::: {.column width="100%"}
-
-::: incremental
-- Consider visualization as part of your research strategy
-- Certain figure representation choices could create bias and overconfidence
-- Choose visualizations that make data comparisons obvious 
+::: {.column width="90%"}
 
 
-:::
+When developing a single-message figure:
+
+Visual that provides clarity of interpretation;
+  
+  - Viewer instantly understands the main insight
+
+Make the Intended Insight Immediately Clear:
+
+  - Before plotting, ask: “What is the single insight I want my audience to take away?”
+
+  - The entire visual structure — the arrangement of categories, ordering, and supporting elements — should make this insight obvious at first glance
 
 
 :::
@@ -728,10 +700,5 @@ Make the message obvious
 :::
 ::: footer
 :::
-
-
-
-
-
 
 
