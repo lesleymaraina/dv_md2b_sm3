@@ -120,7 +120,7 @@ Discuss how to develop a single-message categorical chart for a biomedical resea
 ::: {.column width="50%"}
 
 
-::: incremental
+
 **1. Define the insight first**
 
 2. Consider hierarchy of importance
@@ -129,7 +129,7 @@ Discuss how to develop a single-message categorical chart for a biomedical resea
 
 4. Supporting evidence
 
-:::
+
 :::
 
 :::
