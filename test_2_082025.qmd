@@ -70,7 +70,7 @@ Discuss how to develop a single-message categorical chart for a biomedical resea
 ## <span style="font-size:80%"></span> {.smaller}
 
 ::: columns
-::: {.column width="90%"}
+::: {.column width="70%"}
 ![](images/data_influx.png){.border .border-thick}
 :::
 
@@ -92,7 +92,7 @@ Discuss how to develop a single-message categorical chart for a biomedical resea
 ## <span style="font-size:80%"></span> {.smaller}
 
 ::: columns
-::: {.column width="90%"}
+::: {.column width="70%"}
 ![](images/rsearch_progress.png){.border .border-thick}
 :::
 
